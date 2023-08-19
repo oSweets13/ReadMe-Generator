@@ -21,30 +21,19 @@ function generateMarkdown(data) {
 
   ## Table of Contents
   * [Description](#Description)
-  * [Questions](#Questions)
   * [License](#License)
+  * [Questions](#Questions)
 
   ## Description
   ${data.projectDes}
 
+  ## License
+  This project is licensed under ${data.projectLicense}
 
   ## Questions
   If you have any questions about this project, please contact me directly at ${data.usersEmail}. You can view more of my projects at https://github.com/${data.usersGitHub}.
 `;
 }
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if (license === "None") {
-    return "";
-  } else {
 
-    return `
-  ### License
-  ${license}
-  ${renderLicenseBadge(license)}
-  `
-}
-}
 
 module.exports = generateMarkdown;
